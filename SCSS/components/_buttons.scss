@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as v;
+
+.button {
+    color: v.$color-black;
+    background-color: v.$color-white;
+    padding: clamp(0.625rem, 2vw, 1.25rem) clamp(2rem, 7vw, 5rem);
+
+    &:hover {
+        color: v.$color-white;
+        background-color: rgb(208, 147, 67);
+    }
+
+    &--big {
+        background-color: v.$color-primary;
+        padding: clamp(0.625rem, 2vw, 2.2rem) clamp(2rem, 7vw, 5rem);
+    }
+}

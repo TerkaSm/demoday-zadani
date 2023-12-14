@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+
+.u-padding-top-big {
+    padding-top: 5.625rem;
+}
+
+.u-padding-top-medium {
+    padding-top: clamp(1rem, 3vw, 5rem)
+}
+
+.u-wrapp-pos-absolute {
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1.8rem;
+}

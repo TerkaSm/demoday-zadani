@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.section {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero {
+    background-image: url(../assets/img/hero_img.jpg);
+    width: 100%;
+    background-color: antiquewhite;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    height: 93vh;
+}
+
+.hero_content {
+    place-content: center;
+    text-align: center;
+    max-width: 623px;
+    padding: 1.25rem;
+}
+
+.hero_text {
+    color: v.$color-white;
+    max-height: 1107px;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+}
+
+// Offer
+
+.offer-1 {
+    
+    &__grid {
+        padding: clamp(1rem, 2vw, 3rem);
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+        gap: 1.25rem;
+
+        @include mx.media-min(850px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mx.media-min(1050px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
+}
+
+.offer-2 {
+    text-align: center;
+    background-color: v.$color-black;
+    height: 39.3125rem;
+
+    &__title {
+        font-weight: 500;
+        padding-top: 3rem;
+        font-size: 2.25rem;
+        position: absolute;
+        bottom: 11rem;
+    }
+    
+    &__flex {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: clamp(1rem, 2vw, 3rem);
+        display: flex;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: -11rem;
+
+        @include mx.media-min(850px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mx.media-min(1050px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
+}

@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.header {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    padding: clamp(1.25rem, 4vw, 2.8rem);
+    position: relative;
+    justify-content: space-between;
+
+    &__logo {
+        background-color: v.$color-grey;
+        padding: clamp(0.625rem, 2vw, 1.25rem) clamp(2rem, 7vw, 5rem);
+        color: v.$color-black;
+    }
+
+    &__search {
+        position: relative;
+    }
+
+    &__search-input {
+        display: none;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+
+        @include mx.media-min(1040px) {
+            border: none;
+            display: block;
+            padding: .75rem;
+            border-bottom: 1px solid #C9C9C9;
+            width: clamp(15rem, 20vw, 18rem);
+        }
+    }
+
+    &__search-icon {
+        
+
+        @include mx.media-min(1040px) {
+            position: absolute;
+            bottom: .625rem;
+            right: .625rem;
+        }
+    }
+
+
+    &__currency {
+        display: none;
+
+        @include mx.media-min(1190px) {
+            display: block;
+        }
+    }
+
+    &__cart {
+        font-size: 0.875rem;
+    }
+
+    &__cart-count {
+        font-size: 0.875rem;
+        padding: .2rem .5rem;
+        margin-left: 5px;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+
+    &__profile {
+        display: none;
+
+        @include mx.media-min(1130px) {
+            display: block;
+        }
+    }
+}
+
+
+

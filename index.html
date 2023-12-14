@@ -4,7 +4,117 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Prodej investičních kovů</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="header">
+			<a class="header__logo" href="#">Logo</a>
+
+			<!--Mobile-nav-->
+
+			<div class="mobile-nav">
+
+				
+				<input class="mobile-nav__checkbox" type="checkbox" id="mobile-nav-toggle">
+				
+				<a class="mobile-nav__icon-close" href="index.html"><img src="assets/icons/icon-close.svg" alt="ikona zavřít"></a>
+	
+				<nav class="mobile-nav__nav">
+					<ul class="mobile-nav__list">
+						<li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Produkty</a></li>
+						<li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Akční nabídka</a></li>
+						<li class="mobile-nav__item"><a class="mobile-nav__link" href="#">o nás</a></li>
+						<li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Kontakt</a></li>
+					</ul>
+				</nav>
+			</div>
+	
+			<!--Navigation-->
+	
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item"><a class="navigation__link" href="#">Produkty</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Akční nabídka</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">O nás</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Kontakt</a></li>
+				</ul>
+			</nav>
+
+			<!--Search, currency, cart, profile-->
+
+			<div class="header__search">
+				<input class="header__search-input" type="text" name="search" id="search" placeholder="Napište, co hledáte">
+				<img class="header__search-icon" src="assets/icons/search.svg" alt="ikona vyhledávání">
+			</div>
+
+
+			<p class="header__currency">CZK</p>
+			<p class="header__cart">Košík <span class="header__cart-count">2</span></p>
+			<img class="header__profile" src="assets/icons/iconoir_profile-circled.svg" alt="ikona profil">
+
+			<!--Hamburger icon-->
+
+			<label class="mobile-nav__button" for="mobile-nav-toggle"><img src="assets/icons/hamburger-menu-icon.svg" alt="ikona menu"></label>
+		</header>
+
+		<!--Main-->
+
+		<main>
+
+			<!--Hero-->
+
+			<section class="hero">
+				<div class="hero_content">
+					<p class="hero_text">Lorem ipsum dolor sit</p>
+					<h1 class="heading-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+					<div class="u-padding-top-big"><a class="button button--primary" href="">Zobrazit</a></div>
+				</div>
+			</section>
+
+			<section class="section offer-1">
+				<div class="offer-1__grid">
+					<div class="card-1 card-1--1">
+						<h2 class="heading-secondary">Lorem ipsum dolor sit amet, consectetur</h2>
+						<div class="u-padding-top-medium"><a class="button" href="#">Nakupuj</a></div>
+					</div>
+					<div class="card-1 card-1--2">
+						<h2 class="heading-secondary">Lorem ipsum dolor sit amet, consectetur</h2>
+						<div class="u-padding-top-medium"><a class="button" href="#">Nakupuj</a></div>
+					</div>
+					<div class="card-1 card-1--3">
+						<h2 class="heading-secondary">Lorem ipsum dolor sit amet, consectetur</h2>
+						<div class="u-padding-top-medium"><a class="button" href="#">Nakupuj</a></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="offer-2">
+				<h1 class="heading-primary heading-primary--font-medium u-padding-top-medium">Vyberte si z naši nabídky</h1>
+
+				<div class="offer-2__flex">
+					<div class="card-2 card-2--1">
+						<p class="card-2__label">Investiční</p>
+						<h2 class="heading-secondary heading-secondary--font-medium card-2__title">Zlaté mince</h2>
+					</div>
+					<div class="card-2 card-2--2">
+						<p class="card-2__label">Investiční</p>
+						<h2 class="heading-secondary heading-secondary--font-medium card-2__title">Zlaté mince</h2>
+					</div>
+					<div class="card-2 card-2--3">
+						<p class="card-2__label">Investiční</p>
+						<h2 class="heading-secondary heading-secondary--font-medium card-2__title">Zlaté mince</h2>
+					</div>
+					<div class="card-2 card-2--4">
+						<p class="card-2__label">Investiční</p>
+						<h2 class="heading-secondary heading-secondary--font-medium card-2__title">Zlaté mince</h2>
+					</div>
+					<div class="u-wrapp-pos-absolute"><a class="button button--big" href="#">Zobrazit více</a></div>
+				</div>
+				
+			</section>
+		</main>
+
+
+	</body>
 </html>

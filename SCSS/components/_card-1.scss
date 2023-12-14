@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mx;
+
+.card-1 {
+  height: clamp(12.2rem, 40vw, 29rem);
+  background-color: antiquewhite;
+  padding: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  text-align: center;
+  place-items: center;
+
+  @include mx.media-min(850px) {
+    //align-content: end;
+  }
+
+
+  &--1 {
+    background-image: url(../assets/img/coin_1.jpg);
+  }
+
+  &--2 {
+    background-image: url(../assets/img/coin_2.jpg);
+  }
+
+  &--3 {
+    background-image: url(../assets/img/coin_3.jpg);
+  }
+
+}

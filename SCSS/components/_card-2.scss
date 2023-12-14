@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mx;
+
+.card-2 {
+  position: relative;
+  background-color: antiquewhite;
+  height: clamp(17.75rem, 40vw, 38.125rem);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  @include mx.media-min(850px) {
+    //align-content: end;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 5rem;
+    left: 1.25rem;
+  }
+
+  &__label {
+    position: absolute;
+    color: v.$color-white;
+    bottom: 9.5rem;
+    left: 1.25rem;
+  }
+
+
+  &--1 {
+    background-image: url(../assets/img/offer_1.jpg);
+  }
+
+  &--2 {
+    background-image: url(../assets/img/offer_2.jpg);
+  }
+
+  &--3 {
+    background-image: url(../assets/img/offer_3.jpg);
+  }
+
+  &--4 {
+    background-image: url(../assets/img/offer_4.jpg);
+  }
+
+}
