@@ -7,7 +7,7 @@
 }
 
 .u-padding-top-medium {
-    padding-top: clamp(1rem, 3vw, 5rem)
+    padding-top: clamp(1rem, 3vw, 6rem)
 }
 
 .u-wrapp-pos-absolute {
@@ -19,4 +19,12 @@
         bottom: -0.5rem;
         right: 0rem;
     }
+}
+
+.u-translate-y {
+    transform: translateY(clamp(8rem, 20vw, 16rem));
+}
+
+.u-text-center {
+    text-align: center;
 }

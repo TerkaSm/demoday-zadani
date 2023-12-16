@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mx;
+
+.product-card {
+    padding: clamp(0.3rem, 1vw, 0.75rem);
+    border: 1px solid v.$color-grey-2;
+    position: relative;
+    font-weight: 500;
+
+    @include mx.media-min(1050px) {
+        border: 1px solid v.$color-white;
+    }
+
+    &:hover, &:active, &:focus {
+        border: 1px solid v.$color-grey-2;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__availability {
+        font-size: clamp(0.75rem, 1vw, 0.875rem);
+        
+        &--yes {
+            color: v.$color-availability-yes;
+        }
+
+        &--no {
+            color: v.$color-availability-no;
+        }
+
+        &--on-order {
+            color: v.$color-grey-3;
+        }
+    }
+
+    &__price {
+        font-size: clamp(0.75rem, 3vw, 1.125rem); 
+    }
+
+    &__labels {
+        position: absolute;
+        top: clamp(1.83rem, 5vw, 6rem);
+        right: 0;
+
+        @include mx.media-min(1050px) {
+            right: .75rem;
+        }
+    }
+
+    &__label {
+        font-size: clamp(0.75rem, 2vw, 1.125rem);
+        color: v.$color-white;
+        padding: .2em 1em;
+        margin: .6em 0;
+
+        &--new {
+            background-color: v.$color-availability-yes;
+        }
+
+        &--sale {
+            background-color: v.$color-availability-no;
+        }
+    }
+}
+
