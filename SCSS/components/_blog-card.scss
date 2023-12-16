@@ -1,0 +1,142 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mx;
+
+.blog-card {
+    background-color: antiquewhite;
+    height: clamp(14.525rem, 5vw, 21rem);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 1.25rem;
+    display: grid;
+    align-content: end;
+    color: v.$color-white;
+    transition: background-color 0.3s ease;
+
+
+    &--1 {
+        background-image: url(../assets/img/blog-1.jpg);
+        order: 1;
+
+        &:hover {
+            background:
+                linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), 
+                linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0.00) 100%),
+                url(../assets/img/blog-1.jpg), lightgray 50% / cover no-repeat;
+            background-blend-mode: normal, normal, luminosity;
+        }
+      }
+    
+    &--2 {
+        background-image: url(../assets/img/blog-2.jpg);
+        order: 2;
+
+        &:hover {
+            background:
+                linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), 
+                linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0.00) 100%),
+                url(../assets/img/blog-2.jpg), lightgray 50% / cover no-repeat;
+            background-blend-mode: normal, normal, luminosity;
+        }
+
+        @include mx.media-min(700px) {
+            order: 3;
+        }
+
+        @include mx.media-min(700px) {
+            order: 4;
+        }
+    }
+
+    &--3 {
+        background-image: url(../assets/img/blog-3.jpg);
+        order: 3;
+
+        &:hover {
+            background:
+                linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), 
+                linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0.00) 100%),
+                url(../assets/img/blog-3.jpg), lightgray 50% / cover no-repeat;
+            background-blend-mode: normal, normal, luminosity;
+        }
+        
+        @include mx.media-min(700px) {
+            order: 2;
+        }
+
+        @include mx.media-min(900px) {
+            order: 2;
+        }
+    }
+
+    &--4 {
+        background-image: url(../assets/img/blog-4.jpg);
+        display: none;
+
+        &:hover {
+            background:
+                linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), 
+                linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0.00) 100%),
+                url(../assets/img/blog-4.jpg), lightgray 50% / cover no-repeat;
+            background-blend-mode: normal, normal, luminosity;
+        }
+
+        @include mx.media-min(700px) {
+            display: grid;
+            order: 4;
+        }
+
+        @include mx.media-min(900px) {
+            order: 3;
+        }
+    }
+
+    &--5 {
+        background-image: url(../assets/img/blog-5.jpg);
+        display: none;
+        position: relative;
+
+        &:hover {
+            background:
+                linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), 
+                linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0.00) 100%),
+                url(../assets/img/blog-5.jpg), lightgray 50% / cover no-repeat;
+            background-blend-mode: normal, normal, luminosity;
+        }
+
+        @include mx.media-min(900px) {
+            display: grid;
+            order: 5;
+            grid-column: 2 / -1;
+        }
+    }
+    
+    &__date {
+        font-size: clamp(0.75rem, 2vw, 0.875rem);
+        margin: 0;
+    }
+
+    &__title {
+        margin: .5em 0;
+    }
+
+    &__title img {
+        padding-left: 3rem;
+    }
+
+    &__author {
+        display: flex;
+        gap: 0.4rem;
+        margin-top: 0;
+        font-size: clamp(0.75rem, 2vw, 0.875rem);
+    }
+
+    &__author-icon {
+        
+    }
+
+    &__author-name {
+
+    }
+}

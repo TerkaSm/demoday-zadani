@@ -70,16 +70,14 @@ a {
   padding-top: clamp(1rem, 3vw, 6rem);
 }
 
+.u-padding-top-bottom {
+  padding: clamp(3.37rem, 6vw, 5.62rem) 0;
+}
+
 .u-wrapp-pos-absolute {
   position: absolute;
-  bottom: -2rem;
-  right: 0rem;
-}
-@media screen and (min-width: 750px) {
-  .u-wrapp-pos-absolute {
-    bottom: -0.5rem;
-    right: 0rem;
-  }
+  bottom: clamp(1rem, 2vw, 3rem);
+  right: clamp(1rem, 2vw, 3rem);
 }
 
 .u-translate-y {
@@ -400,6 +398,114 @@ template {
   display: none;
 }
 
+.blog-card {
+  background-color: antiquewhite;
+  height: clamp(14.525rem, 5vw, 21rem);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 1.25rem;
+  display: grid;
+  align-content: end;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.blog-card--1 {
+  background-image: url(../assets/img/blog-1.jpg);
+  order: 1;
+}
+.blog-card--1:hover {
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-1.jpg), lightgray 50%/cover no-repeat;
+  background-blend-mode: normal, normal, luminosity;
+}
+.blog-card--2 {
+  background-image: url(../assets/img/blog-2.jpg);
+  order: 2;
+}
+.blog-card--2:hover {
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-2.jpg), lightgray 50%/cover no-repeat;
+  background-blend-mode: normal, normal, luminosity;
+}
+@media screen and (min-width: 700px) {
+  .blog-card--2 {
+    order: 3;
+  }
+}
+@media screen and (min-width: 700px) {
+  .blog-card--2 {
+    order: 4;
+  }
+}
+.blog-card--3 {
+  background-image: url(../assets/img/blog-3.jpg);
+  order: 3;
+}
+.blog-card--3:hover {
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-3.jpg), lightgray 50%/cover no-repeat;
+  background-blend-mode: normal, normal, luminosity;
+}
+@media screen and (min-width: 700px) {
+  .blog-card--3 {
+    order: 2;
+  }
+}
+@media screen and (min-width: 900px) {
+  .blog-card--3 {
+    order: 2;
+  }
+}
+.blog-card--4 {
+  background-image: url(../assets/img/blog-4.jpg);
+  display: none;
+}
+.blog-card--4:hover {
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-4.jpg), lightgray 50%/cover no-repeat;
+  background-blend-mode: normal, normal, luminosity;
+}
+@media screen and (min-width: 700px) {
+  .blog-card--4 {
+    display: grid;
+    order: 4;
+  }
+}
+@media screen and (min-width: 900px) {
+  .blog-card--4 {
+    order: 3;
+  }
+}
+.blog-card--5 {
+  background-image: url(../assets/img/blog-5.jpg);
+  display: none;
+  position: relative;
+}
+.blog-card--5:hover {
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-5.jpg), lightgray 50%/cover no-repeat;
+  background-blend-mode: normal, normal, luminosity;
+}
+@media screen and (min-width: 900px) {
+  .blog-card--5 {
+    display: grid;
+    order: 5;
+    grid-column: 2/-1;
+  }
+}
+.blog-card__date {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  margin: 0;
+}
+.blog-card__title {
+  margin: 0.5em 0;
+}
+.blog-card__title img {
+  padding-left: 3rem;
+}
+.blog-card__author {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
 .button {
   color: #000;
   background-color: #fff;
@@ -414,7 +520,7 @@ template {
 }
 .button--big {
   background-color: #ECB235;
-  padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
+  padding: clamp(1.4rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
   font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 .button--big:hover {
@@ -423,7 +529,7 @@ template {
 }
 
 .card-1 {
-  height: clamp(12.2rem, 40vw, 29rem);
+  height: clamp(12.2rem, 22vw, 29rem);
   background-color: antiquewhite;
   padding: 1rem;
   background-position: center;
@@ -432,6 +538,12 @@ template {
   display: grid;
   text-align: center;
   place-items: center;
+}
+@media screen and (min-width: 850px) {
+  .card-1 {
+    align-content: end;
+    padding-bottom: 5rem;
+  }
 }
 .card-1--1 {
   background-image: url(../assets/img/coin_1.jpg);
@@ -445,7 +557,7 @@ template {
 
 .card-2 {
   background-color: antiquewhite;
-  height: clamp(17.75rem, 40vw, 38.125rem);
+  height: clamp(17.75rem, 34vw, 38.125rem);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -456,13 +568,14 @@ template {
 }
 .card-2__text-box {
   text-align: start;
-  padding-bottom: clamp(3.5rem, 5vw, 7rem);
+  padding-bottom: clamp(3.5rem, 7vw, 7.2rem);
 }
 .card-2__title {
   margin-top: 0;
 }
 .card-2__label {
   color: #fff;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 .card-2__arrow {
   padding-left: 10px;
@@ -716,7 +829,7 @@ template {
 }
 
 .section {
-  max-width: 1440px;
+  max-width: 1496px;
   margin: 0 auto;
 }
 
@@ -770,7 +883,7 @@ template {
 .offer-2 {
   text-align: center;
   background-color: #131313;
-  height: clamp(19rem, 40vw, 39.3125rem);
+  height: clamp(17.75rem, 34vw, 38.125rem);
 }
 .offer-2__title {
   font-weight: 500;
@@ -781,7 +894,7 @@ template {
 }
 .offer-2__flex {
   position: relative;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: clamp(1rem, 2vw, 3rem);
   display: flex;
@@ -828,5 +941,28 @@ template {
 @media screen and (min-width: 1050px) {
   .products__grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.blog {
+  background-color: #131313;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.blog__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: clamp(1rem, 2vw, 3rem);
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .blog__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 900px) {
+  .blog__grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

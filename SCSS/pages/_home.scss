@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as mx;
 
 .section {
-    max-width: 1440px;
+    max-width: 1496px;
     margin: 0 auto;
 }
 
@@ -60,7 +60,7 @@
 .offer-2 {
     text-align: center;
     background-color: v.$color-background;
-    height: clamp(19rem, 40vw, 39.3125rem);
+    height: clamp(17.75rem, 34vw, 38.125rem);
 
     &__title {
         font-weight: 500;
@@ -72,7 +72,7 @@
     
     &__flex {
         position: relative;
-        max-width: 1400px;
+        max-width: 1440px;
         margin: 0 auto;
         padding: clamp(1rem, 2vw, 3rem);
         display: flex;
@@ -87,7 +87,6 @@
 
     &__filter {
         display: flex;
-        //transform: translateY(clamp(8rem, 20vw, 16rem));
         margin: 0 auto;
         gap: 1.88rem;
         justify-content: center;
@@ -126,6 +125,28 @@
 
         @include mx.media-min(1050px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
+
+.blog {
+    background-color: v.$color-background;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__grid {
+        display: grid;
+        grid-template-columns:  1fr;
+        padding: clamp(1rem, 2vw, 3rem);
+        justify-content: center;
+        width: 100%;
+
+        @include mx.media-min(700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mx.media-min(900px) {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 }

@@ -16,7 +16,7 @@
 
     &--big {
         background-color: v.$color-primary;
-        padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
+        padding: clamp(1.4rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
         font-size: clamp(0.75rem, 2vw, 0.875rem);
 
         &:hover {

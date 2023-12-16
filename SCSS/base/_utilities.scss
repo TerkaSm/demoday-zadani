@@ -7,18 +7,17 @@
 }
 
 .u-padding-top-medium {
-    padding-top: clamp(1rem, 3vw, 6rem)
+    padding-top: clamp(1rem, 3vw, 6rem);
+}
+
+.u-padding-top-bottom {
+    padding: clamp(3.37rem, 6vw, 5.62rem) 0;
 }
 
 .u-wrapp-pos-absolute {
     position: absolute;
-    bottom: -2rem;
-    right: 0rem;
-
-    @include mx.media-min(750px) {
-        bottom: -0.5rem;
-        right: 0rem;
-    }
+    bottom: clamp(1rem, 2vw, 3rem);
+    right: clamp(1rem, 2vw, 3rem);
 }
 
 .u-translate-y {

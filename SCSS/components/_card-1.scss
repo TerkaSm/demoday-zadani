@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as mx;
 
 .card-1 {
-  height: clamp(12.2rem, 40vw, 29rem);
+  height: clamp(12.2rem, 22vw, 29rem);
   background-color: antiquewhite;
   padding: 1rem;
   background-position: center;
@@ -13,7 +13,8 @@
   place-items: center;
 
   @include mx.media-min(850px) {
-    //align-content: end;
+    align-content: end;
+    padding-bottom: 5rem;
   }
 
 

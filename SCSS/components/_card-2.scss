@@ -3,7 +3,7 @@
 
 .card-2 {
   background-color: antiquewhite;
-  height: clamp(17.75rem, 40vw, 38.125rem);
+  height: clamp(17.75rem, 34vw, 38.125rem);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,13 +12,10 @@
   display: grid;
   align-content: end;
 
-  @include mx.media-min(850px) {
-    //align-content: end;
-  }
 
   &__text-box {
     text-align: start;
-    padding-bottom: clamp(3.5rem, 5vw, 7rem);
+    padding-bottom: clamp(3.5rem, 7vw, 7.2rem);
   }
 
   &__title {
@@ -27,6 +24,7 @@
 
   &__label {
     color: v.$color-white;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
   }
 
   &__arrow {
