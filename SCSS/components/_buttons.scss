@@ -6,12 +6,18 @@
     padding: clamp(0.625rem, 2vw, 1.25rem) clamp(2rem, 7vw, 5rem);
 
     &:hover {
-        color: v.$color-white;
-        background-color: rgb(208, 147, 67);
+        color: v.$color-black;
+        background-color: v.$color-primary;
     }
 
     &--big {
         background-color: v.$color-primary;
-        padding: clamp(0.625rem, 2vw, 2.2rem) clamp(2rem, 7vw, 5rem);
+        padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
+        font-size: clamp(0.75rem, 2vw, 0.875rem);
+
+        &:hover {
+            color: v.$color-primary;
+            background-color: v.$color-background;
+        }
     }
 }

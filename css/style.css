@@ -40,7 +40,7 @@ a {
 }
 
 .heading-secondary {
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -72,8 +72,14 @@ a {
 
 .u-wrapp-pos-absolute {
   position: absolute;
-  bottom: 1.8rem;
-  right: 1.8rem;
+  bottom: -2rem;
+  right: 0rem;
+}
+@media screen and (min-width: 750px) {
+  .u-wrapp-pos-absolute {
+    bottom: -0.5rem;
+    right: 0rem;
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -392,12 +398,17 @@ template {
   padding: clamp(0.625rem, 2vw, 1.25rem) clamp(2rem, 7vw, 5rem);
 }
 .button:hover {
-  color: #fff;
-  background-color: rgb(208, 147, 67);
+  color: #000;
+  background-color: #ECB235;
 }
 .button--big {
   background-color: #ECB235;
-  padding: clamp(0.625rem, 2vw, 2.2rem) clamp(2rem, 7vw, 5rem);
+  padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+.button--big:hover {
+  color: #ECB235;
+  background-color: #131313;
 }
 
 .card-1 {
@@ -422,24 +433,29 @@ template {
 }
 
 .card-2 {
-  position: relative;
   background-color: antiquewhite;
   height: clamp(17.75rem, 40vw, 38.125rem);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  padding: 1.25rem;
+  display: grid;
+  align-content: end;
+}
+.card-2__text-box {
+  text-align: start;
+  padding-bottom: clamp(3.5rem, 5vw, 7rem);
 }
 .card-2__title {
-  position: absolute;
-  bottom: 5rem;
-  left: 1.25rem;
+  margin-top: 0;
 }
 .card-2__label {
-  position: absolute;
   color: #fff;
-  bottom: 9.5rem;
-  left: 1.25rem;
+}
+.card-2__arrow {
+  padding-left: 10px;
+  margin: -3px;
 }
 .card-2--1 {
   background-image: url(../assets/img/offer_1.jpg);
@@ -449,9 +465,22 @@ template {
 }
 .card-2--3 {
   background-image: url(../assets/img/offer_3.jpg);
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .card-2--3 {
+    display: grid;
+  }
 }
 .card-2--4 {
   background-image: url(../assets/img/offer_4.jpg);
+  display: none;
+  position: relative;
+}
+@media screen and (min-width: 750px) {
+  .card-2--4 {
+    display: grid;
+  }
 }
 
 .header {
@@ -674,8 +703,8 @@ template {
 
 .offer-2 {
   text-align: center;
-  background-color: #000;
-  height: 39.3125rem;
+  background-color: #131313;
+  height: clamp(19rem, 40vw, 39.3125rem);
 }
 .offer-2__title {
   font-weight: 500;

@@ -2,29 +2,36 @@
 @use "../abstracts/mixins" as mx;
 
 .card-2 {
-  position: relative;
   background-color: antiquewhite;
   height: clamp(17.75rem, 40vw, 38.125rem);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  padding: 1.25rem;
+  display: grid;
+  align-content: end;
 
   @include mx.media-min(850px) {
     //align-content: end;
   }
 
+  &__text-box {
+    text-align: start;
+    padding-bottom: clamp(3.5rem, 5vw, 7rem);
+  }
+
   &__title {
-    position: absolute;
-    bottom: 5rem;
-    left: 1.25rem;
+    margin-top: 0;
   }
 
   &__label {
-    position: absolute;
     color: v.$color-white;
-    bottom: 9.5rem;
-    left: 1.25rem;
+  }
+
+  &__arrow {
+    padding-left: 10px;
+    margin: -3px;
   }
 
 
@@ -38,10 +45,20 @@
 
   &--3 {
     background-image: url(../assets/img/offer_3.jpg);
+    display: none;
+
+    @include mx.media-min(550px) {
+      display: grid;
+    }
   }
 
   &--4 {
     background-image: url(../assets/img/offer_4.jpg);
-  }
+    display: none;
+    position: relative;
 
+    @include mx.media-min(750px) {
+      display: grid;
+    }
+  }
 }

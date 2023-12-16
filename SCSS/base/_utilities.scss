@@ -12,6 +12,11 @@
 
 .u-wrapp-pos-absolute {
     position: absolute;
-    bottom: 1.8rem;
-    right: 1.8rem;
+    bottom: -2rem;
+    right: 0rem;
+
+    @include mx.media-min(750px) {
+        bottom: -0.5rem;
+        right: 0rem;
+    }
 }

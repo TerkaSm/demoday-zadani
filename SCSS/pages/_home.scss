@@ -59,8 +59,8 @@
 
 .offer-2 {
     text-align: center;
-    background-color: v.$color-black;
-    height: 39.3125rem;
+    background-color: v.$color-background;
+    height: clamp(19rem, 40vw, 39.3125rem);
 
     &__title {
         font-weight: 500;
