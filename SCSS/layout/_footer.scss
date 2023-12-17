@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as v;
+@use "../abstracts/mixins" as mx;
+
+
+.footer {
+    background-color: v.$color-background;
+
+    &__wrapp {
+        max-width: 1440px;
+        padding: clamp(1rem, 2vw, 3rem);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__logo-wrapp {
+        max-width: 1440px;
+        padding: clamp(1rem, 2vw, 3rem);
+        margin: 0 auto;
+
+        @include mx.media-min(1000px) {
+            text-align: start;
+        }
+    }
+
+    &__conteiner {
+        padding: clamp(1rem, 2vw, 3rem);
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: v.$spacer-double;
+        color: v.$color-white;
+
+        @include mx.media-min(700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mx.media-min(1100px) {
+            grid-template-columns: 3fr 3fr 4fr 3fr;
+            text-align: start;
+        }
+
+    }
+
+    &__link {
+        color: v.$color-white;
+        font-weight: 700;
+        padding: .6rem 0;
+        display: inline-block;
+        line-height: 1.7;
+
+        &:hover, 
+        &:active, 
+        &:focus {
+            color: v.$color-primary;
+        }
+    }
+
+    &__submenu {
+        margin: 0;
+        padding-top: 15px;
+        padding-left: 0;
+        list-style: none;
+
+        &--last {
+            padding-top: 0;
+        }
+    }
+
+    &__submenu-item {
+        &--flex {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+
+            @include mx.media-min(1100px) {
+                justify-content: start;
+            }
+        }
+    }
+
+    &__submenu-link {
+        color: v.$color-white;
+        padding: .2rem 0;
+        display: inline-block;
+        line-height: 1.91138rem;
+
+        &:hover, 
+        &:active, 
+        &:focus {
+            color: v.$color-primary;
+        }
+    }
+}
