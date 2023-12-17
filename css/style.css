@@ -83,6 +83,7 @@ a {
   bottom: clamp(1rem, 2vw, 3rem);
   right: clamp(1rem, 2vw, 3rem);
   z-index: 1000;
+  transform: translateY(50%);
 }
 
 .u-translate-y {
@@ -546,6 +547,7 @@ template {
   color: #000;
   background-color: #fff;
   padding: clamp(0.625rem, 2vw, 1.25rem) clamp(2rem, 7vw, 5rem);
+  border: none;
 }
 .button:hover {
   color: #000;
@@ -562,19 +564,54 @@ template {
   background-color: #ECB235;
   padding: clamp(1.4rem, 4vw, 3.1rem) clamp(1rem, 4vw, 2.8rem);
   font-size: clamp(0.75rem, 2vw, 0.875rem);
+  border: none;
 }
 .button--big:hover {
-  color: #ECB235;
-  background-color: #131313;
+  transform: scale(1.03);
 }
 .button--big-dark {
   background-color: #131313;
+  color: #fff;
   padding: clamp(1.4rem, 4vw, 3.1rem) clamp(1rem, 4vw, 2.8rem);
   font-size: clamp(0.75rem, 2vw, 0.875rem);
+  flex: 1;
 }
 .button--big-dark:hover {
-  color: #131313;
-  background-color: #ECB235;
+  background-color: #131313;
+  color: #fff;
+  transform: scale(1.03);
+}
+.button--big-dark img {
+  width: 3vw;
+  min-width: 2rem;
+  max-width: 3rem;
+}
+.button--cart {
+  border: none;
+  padding: 15em 0 0 7em;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transform: translateY(0.3em);
+}
+@media screen and (min-width: 1050px) {
+  .button--cart {
+    opacity: 0;
+  }
+}
+.button--cart:hover {
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 100%;
+  transform: scale(1.03);
+}
+@media screen and (min-width: 1050px) {
+  .button--cart:hover {
+    transform: scale(1);
+  }
+}
+.button--cart img {
+  min-width: 2.12rem;
+  width: 8vw;
+  max-width: 3.37rem;
 }
 
 .card-1 {
@@ -627,7 +664,7 @@ template {
   font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 .card-2__arrow {
-  padding-left: 10px;
+  padding-left: clamp(0.5rem, 2vw, 1.5rem);
   margin: -3px;
 }
 .card-2--1 {
@@ -654,6 +691,36 @@ template {
   .card-2--4 {
     display: grid;
   }
+}
+
+.contact-form {
+  display: flex;
+  padding: 1.25rem;
+  max-width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .contact-form {
+    gap: clamp(0.01rem, 0.8vw, 1.69rem);
+  }
+}
+.contact-form__input {
+  border: 2px solid #fff;
+  width: 60vw;
+  min-width: 13.8rem;
+  max-width: 31.25rem;
+  flex: 2;
+}
+.contact-form__input:hover, .contact-form__input:focus, .contact-form__input:active {
+  outline: none;
+  border: 2px solid #000;
+}
+.contact-form__input::-moz-placeholder {
+  padding-right: 2rem;
+  transform: translate(10%);
+}
+.contact-form__input::placeholder {
+  padding-right: 2rem;
+  transform: translate(10%);
 }
 
 .product-card {
@@ -687,6 +754,7 @@ template {
 }
 .product-card__price {
   font-size: clamp(0.75rem, 3vw, 1.125rem);
+  margin-bottom: 0;
 }
 .product-card__labels {
   position: absolute;
@@ -709,6 +777,11 @@ template {
 }
 .product-card__label--sale {
   background-color: #F24D4D;
+}
+.product-card__button-wrapp {
+  position: absolute;
+  bottom: clamp(-0.2rem, 1vw, 0.55rem);
+  right: clamp(0.3rem, 1vw, 0.75rem);
 }
 
 .header {
@@ -1000,6 +1073,7 @@ template {
 .blog__grid {
   position: relative;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: 1fr;
   padding: clamp(1rem, 2vw, 3rem);
   justify-content: center;
@@ -1019,14 +1093,36 @@ template {
 .benefits {
   padding: clamp(2.94rem, 6vw, 9.13rem) 0;
 }
-.benefits__flex {
+.benefits__grid {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: clamp(1rem, 2vw, 3rem);
+  gap: clamp(1rem, 2vw, 3rem) 0;
 }
 @media screen and (min-width: 1200px) {
-  .benefits__flex {
+  .benefits__grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.contact {
+  padding: clamp(2.94rem, 6vw, 9.13rem) 0;
+  background-color: #ECB235;
+  background-image: url(../assets/img/bubble.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 600px) {
+  .contact {
+    background-size: 41%;
+    background-position: 25% 60%;
+  }
+}
+.contact__title {
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as v;
+@use "../abstracts/mixins" as mx;
+
+.contact-form {
+    display: flex;
+    padding: 1.25rem;
+    max-width: 100%;
+
+    @include mx.media-min(600px) {
+        gap: clamp(0.01rem, .8vw, 1.69rem);
+    }
+
+    &__input {
+        border: 2px solid v.$color-white;
+        width: 60vw;
+        min-width: 13.8rem;
+        max-width: 31.25rem;
+        flex: 2;
+
+        &:hover, &:focus, &:active {
+            outline: none;
+            border: 2px solid v.$color-black;
+        }
+
+        &::placeholder {
+            padding-right: 2rem;
+            transform: translate(10%);
+        }
+    }
+}

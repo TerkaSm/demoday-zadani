@@ -28,7 +28,7 @@
   }
 
   &__arrow {
-    padding-left: 10px;
+    padding-left: clamp(.5rem, 2vw, 1.5rem);
     margin: -3px;
   }
 

@@ -23,6 +23,7 @@
     bottom: clamp(1rem, 2vw, 3rem);
     right: clamp(1rem, 2vw, 3rem);
     z-index: 1000;
+    transform: translateY(50%);
 }
 
 .u-translate-y {

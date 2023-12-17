@@ -37,6 +37,7 @@
 
     &__price {
         font-size: clamp(0.75rem, 3vw, 1.125rem); 
+        margin-bottom: 0;
     }
 
     &__labels {
@@ -62,6 +63,12 @@
         &--sale {
             background-color: v.$color-availability-no;
         }
+    }
+
+    &__button-wrapp {
+        position: absolute;
+        bottom: clamp(-0.2rem, 1vw, 0.55rem);
+        right: clamp(0.3rem, 1vw, 0.75rem);
     }
 }
 

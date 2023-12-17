@@ -136,6 +136,7 @@
     &__grid {
         position: relative;
         display: grid;
+        margin: 0 auto;
         grid-template-columns:  1fr;
         padding: clamp(1rem, 2vw, 3rem);
         justify-content: center;
@@ -154,14 +155,36 @@
 .benefits {
     padding: clamp(2.94rem, 6vw, 9.13rem) 0;
 
-    &__flex {
+    &__grid {
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: clamp(1rem, 2vw, 3rem);
+        gap: clamp(1rem, 2vw, 3rem) 0;
 
         @include mx.media-min(1200px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
+    }
+}
+
+.contact {
+    padding: clamp(2.94rem, 6vw, 9.13rem) 0;
+    background-color: v.$color-primary;
+    background-image: url(../assets/img/bubble.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+
+    @include mx.media-min(600px) {
+        background-size: 41%;
+        background-position: 25% 60%;
+    }
+
+    &__title {
+        margin-top: 0;
     }
 }

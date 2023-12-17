@@ -1,9 +1,11 @@
 @use '../abstracts/variables' as v;
+@use "../abstracts/mixins" as mx;
 
 .button {
     color: v.$color-black;
     background-color: v.$color-white;
     padding: clamp(0.625rem, 2vw, 1.25rem) clamp(2rem, 7vw, 5rem);
+    border: none;
 
     &:hover {
         color: v.$color-black;
@@ -23,21 +25,59 @@
         background-color: v.$color-primary;
         padding: clamp(1.4rem, 4vw, 3.1rem) clamp(1rem, 4vw, 2.8rem);
         font-size: clamp(0.75rem, 2vw, 0.875rem);
+        border: none;
+
 
         &:hover {
-            color: v.$color-primary;
-            background-color: v.$color-background;
+            transform: scale(1.03);
         }
     }
 
     &--big-dark {
         background-color: v.$color-background;
+        color: v.$color-white;
         padding: clamp(1.4rem, 4vw, 3.1rem) clamp(1rem, 4vw, 2.8rem);
         font-size: clamp(0.75rem, 2vw, 0.875rem);
+        flex: 1;
 
         &:hover {
-            color: v.$color-background;
-            background-color: v.$color-primary;
+            background-color: v.$color-background;
+            color: v.$color-white;
+            transform: scale(1.03);
         }
+
+        & img {
+            width: 3vw;
+            min-width: 2rem;
+            max-width: 3rem;
+        }
+    }
+
+    &--cart {
+        border: none;
+        padding: 15em 0 0 7em;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0);
+        transform: translateY(0.3em);
+
+        @include mx.media-min(1050px) {
+            opacity: 0;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0);
+            opacity: 100%;
+            transform: scale(1.03);
+
+            @include mx.media-min(1050px) {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &--cart img {
+        min-width: 2.12rem;
+        width: 8vw;
+        max-width: 3.37rem;
     }
 }
