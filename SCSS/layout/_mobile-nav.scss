@@ -12,7 +12,7 @@
     &__icon-close {
         position: absolute;
         top: 0;
-        right: 0;
+        right: -13rem;
         z-index: 3000;
         opacity: 0;
         width: 0;
@@ -37,7 +37,7 @@
         z-index: 2000;
         opacity: 0;
         width: 0;
-        background-color: v.$color-white;
+        background-color: v.$color-primary;
     }
 
     &__list {
@@ -65,7 +65,7 @@
         &:hover, 
         &:active, 
         &:focus {
-            color: v.$color-black;
+            font-weight: 700;
         }
     }
 

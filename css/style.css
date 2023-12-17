@@ -966,7 +966,7 @@ template {
 .mobile-nav__icon-close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -13rem;
   z-index: 3000;
   opacity: 0;
   width: 0;
@@ -988,7 +988,7 @@ template {
   z-index: 2000;
   opacity: 0;
   width: 0;
-  background-color: #fff;
+  background-color: #ECB235;
 }
 .mobile-nav__list {
   position: absolute;
@@ -1011,7 +1011,7 @@ template {
   border-bottom: 1px solid #000;
 }
 .mobile-nav__link:hover, .mobile-nav__link:active, .mobile-nav__link:focus {
-  color: #000;
+  font-weight: 700;
 }
 .mobile-nav__checkbox:checked ~ .mobile-nav__nav {
   opacity: 1;
