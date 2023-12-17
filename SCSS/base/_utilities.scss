@@ -14,6 +14,10 @@
     padding: clamp(3.37rem, 6vw, 5.62rem) 0;
 }
 
+.u-padding-top-bottom-small {
+    padding: clamp(3.37rem, 5vw, 5.4rem) 0;
+}
+
 .u-padding-bottom-medium {
     padding-bottom: clamp(3.37rem, 6vw, 5.62rem);
 }
@@ -27,7 +31,7 @@
 }
 
 .u-translate-y {
-    transform: translateY(clamp(9rem, 20vw, 16rem));
+    transform: translateY(clamp(10rem, 22vw, 16rem));
 }
 
 .u-text-center {

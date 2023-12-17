@@ -74,6 +74,10 @@ a {
   padding: clamp(3.37rem, 6vw, 5.62rem) 0;
 }
 
+.u-padding-top-bottom-small {
+  padding: clamp(3.37rem, 5vw, 5.4rem) 0;
+}
+
 .u-padding-bottom-medium {
   padding-bottom: clamp(3.37rem, 6vw, 5.62rem);
 }
@@ -87,7 +91,7 @@ a {
 }
 
 .u-translate-y {
-  transform: translateY(clamp(9rem, 20vw, 16rem));
+  transform: translateY(clamp(10rem, 22vw, 16rem));
 }
 
 .u-text-center {
@@ -416,8 +420,12 @@ template {
     border-right: 0.6px solid #C4C4C4;
   }
 }
+.benefit-card:first-child {
+  padding-left: 0;
+}
 .benefit-card:last-child {
   border: none;
+  padding-right: 0;
 }
 .benefit-card__icon {
   width: clamp(2.2rem, 6vw, 3.45rem);
@@ -786,10 +794,10 @@ template {
 
 .footer {
   background-color: #131313;
+  font-size: clamp(0.75rem, 1vw, 1.125rem);
 }
 .footer__wrapp {
   max-width: 1440px;
-  padding: clamp(1rem, 2vw, 3rem);
   margin: 0 auto;
   text-align: center;
 }
@@ -804,7 +812,7 @@ template {
   }
 }
 .footer__conteiner {
-  padding: clamp(1rem, 2vw, 3rem);
+  padding: clamp(3.37rem, 6vw, 5.62rem) clamp(1rem, 2vw, 3rem);
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
@@ -820,7 +828,7 @@ template {
 }
 @media screen and (min-width: 1100px) {
   .footer__conteiner {
-    grid-template-columns: 3fr 3fr 4fr 3fr;
+    grid-template-columns: 3fr 3fr 4fr 2fr;
     text-align: start;
   }
 }
@@ -861,6 +869,25 @@ template {
 }
 .footer__submenu-link:hover, .footer__submenu-link:active, .footer__submenu-link:focus {
   color: #ECB235;
+}
+
+.copy {
+  color: #fff;
+  padding: clamp(1rem, 2vw, 3rem);
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 750px) {
+  .copy {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.copy__info {
+  display: flex;
+  gap: 1rem;
 }
 
 .header {

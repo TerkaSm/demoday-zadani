@@ -12,8 +12,13 @@
         border-right: .6px solid v.$color-grey-2;
     }
 
+    &:first-child {
+        padding-left: 0;
+    }
+
     &:last-child {
         border: none;
+        padding-right: 0;
     }
 
     &__icon {
