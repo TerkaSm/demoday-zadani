@@ -42,7 +42,7 @@
 
     &__labels {
         position: absolute;
-        top: clamp(1.83rem, 5vw, 6rem);
+        top: clamp(1.83rem, 3vw, 3rem);
         right: 0;
 
         @include mx.media-min(1050px) {
@@ -51,10 +51,11 @@
     }
 
     &__label {
-        font-size: clamp(0.75rem, 2vw, 1.125rem);
+        font-size: clamp(0.75rem, 1.5vw, 1.125rem);
         color: v.$color-white;
         padding: .2em 1em;
-        margin: .6em 0;
+        margin: .06em 0;
+        text-align: center;
 
         &--new {
             background-color: v.$color-availability-yes;
@@ -62,6 +63,10 @@
 
         &--sale {
             background-color: v.$color-availability-no;
+        }
+
+        &--tip {
+            background-color: v.$color-background;
         }
     }
 

@@ -19,10 +19,21 @@ function displayProducts(start, end) {
       <div class="product-card">
         <img class="product-card__img" src="${product.imgSrc}" alt="${product.title}">
         <h3 class="heading-tertiary product-card__title">${product.title}</h3>
-        <p class="product-card__availability product-card__availability--yes">${product.availability}</p>
+        <p class="product-card__availability 
+          ${product.availability === 'Momentálně nedostupné' ? 'product-card__availability--no' : ''}
+          ${product.availability === 'Skladem' ? 'product-card__availability--yes' : ''}
+          ${product.availability === 'Na objednávku' ? 'product-card__availability--on-order' : ''}">
+          ${product.availability}
+        </p>
         <p class="product-card__price">${product.price} CZK</p>
         <div class="product-card__labels">
-          ${product.flags.map((flag) => `<p class="product-card__label product-card__label--new">${flag}</p>`)}
+          ${product.flags.map((flag) => `
+          <p class="product-card__label 
+          ${flag === 'Novinka' ? 'product-card__label--new' : ''}
+          ${flag === 'Tip' ? 'product-card__label--tip' : ''}
+          ${flag === 'Výprodej' ? 'product-card__label--sale' : ''} ">
+          ${flag}
+          </p>`)}
         </div>
         <div class="product-card__button-wrapp"><button class="button button--cart"><img src="assets/icons/cart.svg" alt="nákupní košík"></button></div>
       </div>
