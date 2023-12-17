@@ -74,14 +74,19 @@ a {
   padding: clamp(3.37rem, 6vw, 5.62rem) 0;
 }
 
+.u-padding-bottom-medium {
+  padding-bottom: clamp(3.37rem, 6vw, 5.62rem);
+}
+
 .u-wrapp-pos-absolute {
   position: absolute;
   bottom: clamp(1rem, 2vw, 3rem);
   right: clamp(1rem, 2vw, 3rem);
+  z-index: 1000;
 }
 
 .u-translate-y {
-  transform: translateY(clamp(8rem, 20vw, 16rem));
+  transform: translateY(clamp(9rem, 20vw, 16rem));
 }
 
 .u-text-center {
@@ -398,13 +403,43 @@ template {
   display: none;
 }
 
+.benefit-card {
+  display: flex;
+  gap: 0.63rem;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .benefit-card {
+    gap: 1.63rem;
+    padding: 0 clamp(1rem, 2vw, 4rem);
+    border-right: 0.6px solid #C4C4C4;
+  }
+}
+.benefit-card:last-child {
+  border: none;
+}
+.benefit-card__icon {
+  width: clamp(2.2rem, 6vw, 3.45rem);
+  padding: 0.3em;
+}
+.benefit-card__icon--museum {
+  width: clamp(1.1rem, 3vw, 1.87em);
+  border: 3px solid #ECB235;
+  border-radius: 50%;
+  padding: 0.4em;
+  margin: 0.5em;
+}
+.benefit-card__text {
+  font-size: clamp(0.75rem, 2vw, 1.125rem);
+}
+
 .blog-card {
   background-color: antiquewhite;
   height: clamp(14.525rem, 5vw, 21rem);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
   padding: 1.25rem;
   display: grid;
   align-content: end;
@@ -416,7 +451,7 @@ template {
   order: 1;
 }
 .blog-card--1:hover {
-  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-1.jpg), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2e2e2e 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-1.jpg), lightgray 50%/cover no-repeat;
   background-blend-mode: normal, normal, luminosity;
 }
 .blog-card--2 {
@@ -424,7 +459,7 @@ template {
   order: 2;
 }
 .blog-card--2:hover {
-  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-2.jpg), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2e2e2e 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-2.jpg), lightgray 50%/cover no-repeat;
   background-blend-mode: normal, normal, luminosity;
 }
 @media screen and (min-width: 700px) {
@@ -442,7 +477,7 @@ template {
   order: 3;
 }
 .blog-card--3:hover {
-  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-3.jpg), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2e2e2e 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-3.jpg), lightgray 50%/cover no-repeat;
   background-blend-mode: normal, normal, luminosity;
 }
 @media screen and (min-width: 700px) {
@@ -460,7 +495,7 @@ template {
   display: none;
 }
 .blog-card--4:hover {
-  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-4.jpg), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2e2e2e 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-4.jpg), lightgray 50%/cover no-repeat;
   background-blend-mode: normal, normal, luminosity;
 }
 @media screen and (min-width: 700px) {
@@ -480,7 +515,7 @@ template {
   position: relative;
 }
 .blog-card--5:hover {
-  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2E2E2E 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-5.jpg), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(236, 178, 53, 0.61) 0%, rgba(236, 178, 53, 0.61) 100%), linear-gradient(64deg, #2e2e2e 0%, rgba(0, 0, 0, 0) 100%), url(../assets/img/blog-5.jpg), lightgray 50%/cover no-repeat;
   background-blend-mode: normal, normal, luminosity;
 }
 @media screen and (min-width: 900px) {
@@ -506,6 +541,7 @@ template {
   margin-top: 0;
   font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
+
 .button {
   color: #000;
   background-color: #fff;
@@ -518,14 +554,27 @@ template {
 .button--primary {
   border: 1px solid #000;
 }
+.button--primary:hover {
+  color: #ECB235;
+  background-color: #131313;
+}
 .button--big {
   background-color: #ECB235;
-  padding: clamp(1.4rem, 4vw, 2.5rem) clamp(1rem, 3vw, 3rem);
+  padding: clamp(1.4rem, 4vw, 3.1rem) clamp(1rem, 4vw, 2.8rem);
   font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 .button--big:hover {
   color: #ECB235;
   background-color: #131313;
+}
+.button--big-dark {
+  background-color: #131313;
+  padding: clamp(1.4rem, 4vw, 3.1rem) clamp(1rem, 4vw, 2.8rem);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+.button--big-dark:hover {
+  color: #131313;
+  background-color: #ECB235;
 }
 
 .card-1 {
@@ -946,15 +995,15 @@ template {
 
 .blog {
   background-color: #131313;
-  max-width: 1440px;
   margin: 0 auto;
 }
 .blog__grid {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   padding: clamp(1rem, 2vw, 3rem);
   justify-content: center;
-  width: 100%;
+  max-width: 1400px;
 }
 @media screen and (min-width: 700px) {
   .blog__grid {
@@ -964,5 +1013,20 @@ template {
 @media screen and (min-width: 900px) {
   .blog__grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.benefits {
+  padding: clamp(2.94rem, 6vw, 9.13rem) 0;
+}
+.benefits__flex {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: clamp(1rem, 2vw, 3rem);
+}
+@media screen and (min-width: 1200px) {
+  .benefits__flex {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

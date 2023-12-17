@@ -131,15 +131,15 @@
 
 .blog {
     background-color: v.$color-background;
-    max-width: 1440px;
     margin: 0 auto;
 
     &__grid {
+        position: relative;
         display: grid;
         grid-template-columns:  1fr;
         padding: clamp(1rem, 2vw, 3rem);
         justify-content: center;
-        width: 100%;
+        max-width: 1400px;
 
         @include mx.media-min(700px) {
             grid-template-columns: 1fr 1fr;
@@ -147,6 +147,21 @@
 
         @include mx.media-min(900px) {
             grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+.benefits {
+    padding: clamp(2.94rem, 6vw, 9.13rem) 0;
+
+    &__flex {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: clamp(1rem, 2vw, 3rem);
+
+        @include mx.media-min(1200px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
 }
