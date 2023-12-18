@@ -7,32 +7,68 @@
 }
 
 .hero {
+    position: relative;
     background-image: url(../assets/img/hero_img.jpg);
     width: 100%;
     background-color: antiquewhite;
+    color: v.$color-white;
+    text-align: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     place-content: center;
     height: 93vh;
+
+    &__content {
+        max-width: 623px;
+        padding: 1.25rem;
+    }
+    
+    &__text {
+        max-height: 1107px;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+    }
+
+    &__scroll-wrapp {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        padding: clamp(1rem, 2vw, 3rem);
+        height: 20vmin;
+        width: 100vw;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        @include mx.media-min(1000px) {
+            display: block;
+        }
+    }
+
+    &__scroll-text {
+        text-align: start;
+        position: absolute;
+        top: -80px;
+        left: -25px;
+        transform: rotate(-90deg);
+    }
+    
+    &__scroll {
+        position: absolute;
+        bottom: 0;
+        height: 10rem;
+        width: 100%;
+        max-width: 1400px;
+        border-left: 1px solid v.$color-white;
+        z-index: 300;
+        
+    }
 }
 
-.hero_content {
-    place-content: center;
-    text-align: center;
-    max-width: 623px;
-    padding: 1.25rem;
-}
 
-.hero_text {
-    color: v.$color-white;
-    max-height: 1107px;
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-}
 
 // Offer
 
@@ -88,24 +124,31 @@
     &__filter {
         display: flex;
         margin: 0 auto;
-        gap: 1.88rem;
+        padding: clamp(2rem, 3vw, 3rem) 0;
+        gap: 3.5rem;
         justify-content: center;
         align-items: baseline;
     }
 
-    &__filter-label {
-        color: v.$color-black;
-        font-size: 1.5rem;
+    &__filter-button {
+        font-size: 1rem;
         font-weight: 500;
+        color: v.$color-grey-3;
+        border: 0;
+        background-color: v.$color-white;
+
+        &:hover, &:focus, &:active {
+            color: v.$color-black;
+            transform: scale(1.5);
+        }
     }
 
-    &__no-label {
+    &__no-button {
         display: none;
 
         @include mx.media-min(850px) {
             display: block;
-            font-size: 1rem;
-            color: v.$color-grey-3;
+            
         }
     }
 

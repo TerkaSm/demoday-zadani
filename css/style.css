@@ -1066,9 +1066,12 @@ template {
 }
 
 .hero {
+  position: relative;
   background-image: url(../assets/img/hero_img.jpg);
   width: 100%;
   background-color: antiquewhite;
+  color: #fff;
+  text-align: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1076,21 +1079,47 @@ template {
   place-content: center;
   height: 93vh;
 }
-
-.hero_content {
-  place-content: center;
-  text-align: center;
+.hero__content {
   max-width: 623px;
   padding: 1.25rem;
 }
-
-.hero_text {
-  color: #fff;
+.hero__text {
   max-height: 1107px;
   text-transform: uppercase;
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
+}
+.hero__scroll-wrapp {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: clamp(1rem, 2vw, 3rem);
+  height: 20vmin;
+  width: 100vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1000px) {
+  .hero__scroll-wrapp {
+    display: block;
+  }
+}
+.hero__scroll-text {
+  text-align: start;
+  position: absolute;
+  top: -80px;
+  left: -25px;
+  transform: rotate(-90deg);
+}
+.hero__scroll {
+  position: absolute;
+  bottom: 0;
+  height: 10rem;
+  width: 100%;
+  max-width: 1400px;
+  border-left: 1px solid #fff;
+  z-index: 300;
 }
 
 .offer-1__grid {
@@ -1138,23 +1167,28 @@ template {
 .products__filter {
   display: flex;
   margin: 0 auto;
-  gap: 1.88rem;
+  padding: clamp(2rem, 3vw, 3rem) 0;
+  gap: 3.5rem;
   justify-content: center;
   align-items: baseline;
 }
-.products__filter-label {
-  color: #000;
-  font-size: 1.5rem;
+.products__filter-button {
+  font-size: 1rem;
   font-weight: 500;
+  color: #979797;
+  border: 0;
+  background-color: #fff;
 }
-.products__no-label {
+.products__filter-button:hover, .products__filter-button:focus, .products__filter-button:active {
+  color: #000;
+  transform: scale(1.5);
+}
+.products__no-button {
   display: none;
 }
 @media screen and (min-width: 850px) {
-  .products__no-label {
+  .products__no-button {
     display: block;
-    font-size: 1rem;
-    color: #979797;
   }
 }
 .products__grid {
